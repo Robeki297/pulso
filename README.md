@@ -6,6 +6,10 @@ An interactive dashboard for Aruba’s economy and tourism, with GDP, inflation,
 
 ## Hosting
 
+Website address: https://robeki297.github.io/pulso/
+
+Repository: https://github.com/Robeki297/pulso
+
 Static HTML, CSS and JavaScript; no build or dependencies required. In GitHub Settings → Pages, select Deploy from a branch, main, and /(root).
 
 ## Data
