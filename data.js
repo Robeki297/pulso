@@ -31,3 +31,18 @@ DATA.stayoverPrior=[124787,123539,144095,126419,117125,126391,141904];
 DATA.stayoverGrowth=DATA.stayover.map((v,i)=>(v/DATA.stayoverPrior[i]-1)*100);
 DATA.tourismCountries=[["United States", 706149, 111236], ["Canada", 52414, 4696], ["Venezuela", 1948, 325], ["Colombia", 36996, 7762], ["Brazil", 16863, 3250], ["Argentina", 87492, 16905], ["Chile", 6932, 1193], ["Ecuador", 5616, 748], ["Peru", 12263, 1967], ["Paraguay", 1050, 192], ["Uruguay", 3192, 648], ["Mexico", 2256, 439], ["Other South America", 8471, 1264], ["Netherlands", 22892, 3626], ["United Kingdom", 2909, 379], ["Germany", 2697, 310], ["Italy", 2798, 600], ["Sweden", 669, 76], ["Belgium", 1040, 154], ["Austria", 376, 82], ["Switzerland", 1299, 303], ["Other Europe", 7321, 1257], ["Rest of world", 22716, 3446]];
 DATA.tourismAccommodation={ytd:{arrivals:[281121,128670,214100,382468],nights:[1547930,746144,1679145,2827747]},month:{arrivals:[46473,18314,34742,61329],nights:[261017,102494,257738,452173]}};
+
+// September 28 extension: CBA December 2024 table 4, column 8.
+DATA.reserveMonths = Array.from({length:31},(_,i)=>`${2024+Math.floor(i/12)}-${String(i%12+1).padStart(2,'0')}`);
+DATA.reserves = [3211.6,3217.2,3198.8,3242.5,3354.8,3452.9,3499.8,3565.3,3824.4,3689.0,3729.7,3666.3,...DATA.reserves];
+// CBA April 2026 table 1 supplies February–April 2025 and 2026 balances.
+DATA.creditMonths=['2026-02','2026-03','2026-04',...DATA.creditMonths];
+const creditEarlier={credit:[4702.3,4720.1,4733.7],enterprise:[2276.3,2272.4,2276.0],consumer:[571.7,589.8,593.8],housing:[1840.0,1843.4,1849.6]};
+const creditEarlierPrior={credit:[4257.3,4254.9,4229.3],enterprise:[2051.1,2048.1,2004.3],consumer:[483.2,480.1,488.1],housing:[1711.3,1715.1,1725.2]};
+for(const k of Object.keys(creditEarlier)){
+ DATA.creditLevels[k]=[...creditEarlier[k],...DATA.creditLevels[k]];
+ DATA.creditPrior[k]=[...creditEarlierPrior[k],...DATA.creditPrior[k]];
+ DATA[k]=DATA.creditLevels[k].map((v,i)=>(v/DATA.creditPrior[k][i]-1)*100);
+}
+// Nominal 2025 GDP estimate / official AWG-USD parity / CBS midyear population.
+DATA.gdpPerCapita=[7912.1e6/1.79/109435];
