@@ -1,212 +1,185 @@
-/* CBS table 7.4; Mercala July/June 2026; OECD Brick by Brick figure 4.1. See housing methodology. */
+/* CBS table 7.4; Properstar house price/m² September 2026; OECD Housing Policy Toolkit 2022 rows only. */
 const HOUSING = {
   "checked": "2026-09-30",
   "monthlyWageAWG": 2912,
   "wageYear": 2024,
-  "awgPerUSD": 1.79,
-  "prices": [
-    {
-      "label": "January\u2013July 2026",
-      "usd": 599500,
-      "n": 216
-    },
-    {
-      "label": "July 2026 only",
-      "usd": 799000,
-      "n": 41
-    },
-    {
-      "label": "January\u2013June 2026",
-      "usd": 564000,
-      "n": 182
-    }
-  ],
+  "areaM2": 100,
+  "pricePerM2AWG": 5692,
+  "pricePeriod": "September 2026",
   "peers": [
-    {
-      "code": "AUS",
-      "name": "Australia",
-      "ratio": 14.4374900659339,
-      "period": "2020 Q4"
-    },
     {
       "code": "AUT",
       "name": "Austria",
-      "ratio": 11.921451190096,
-      "period": "2020 Q3"
+      "ratio": 13.3351609180551,
+      "period": "2022"
     },
     {
       "code": "BEL",
       "name": "Belgium",
-      "ratio": 10.2837148235101,
-      "period": "2020 Q3"
+      "ratio": 10.0553173843303,
+      "period": "2022"
     },
     {
       "code": "CAN",
       "name": "Canada",
-      "ratio": 9.91562357715605,
-      "period": "2020 Q4"
+      "ratio": 11.2811773816185,
+      "period": "2022"
     },
     {
       "code": "CHE",
       "name": "Switzerland",
-      "ratio": 12.5563806339868,
-      "period": "2020 Q3"
+      "ratio": 13.1667628966808,
+      "period": "2022"
     },
     {
       "code": "CZE",
       "name": "Czechia",
-      "ratio": 9.63313180052659,
-      "period": "2020 Q3"
+      "ratio": 10.6284741044108,
+      "period": "2022"
     },
     {
       "code": "DEU",
       "name": "Germany",
-      "ratio": 9.41245688423701,
-      "period": "2020 Q3"
+      "ratio": 10.1356221819966,
+      "period": "2022"
     },
     {
       "code": "DNK",
       "name": "Denmark",
-      "ratio": 9.32214098815085,
-      "period": "2020 Q3"
+      "ratio": 9.4460205983667,
+      "period": "2022"
     },
     {
       "code": "ESP",
       "name": "Spain",
-      "ratio": 11.1010580703653,
-      "period": "2020 Q3"
-    },
-    {
-      "code": "EST",
-      "name": "Estonia",
-      "ratio": 9.16353932267423,
-      "period": "2020 Q3"
+      "ratio": 11.9019659529941,
+      "period": "2022"
     },
     {
       "code": "FIN",
       "name": "Finland",
-      "ratio": 6.65369448489584,
-      "period": "2020 Q3"
+      "ratio": 6.59134205535165,
+      "period": "2022"
     },
     {
       "code": "FRA",
       "name": "France",
-      "ratio": 12.7917549871776,
-      "period": "2020 Q4"
+      "ratio": 12.912630587394,
+      "period": "2022"
     },
     {
       "code": "GBR",
       "name": "United Kingdom",
-      "ratio": 11.0039635961253,
-      "period": "2020 Q3"
+      "ratio": 11.8413468571027,
+      "period": "2022"
     },
     {
       "code": "GRC",
       "name": "Greece",
-      "ratio": 12.9848121721483,
-      "period": "2020 Q4"
+      "ratio": 13.4752860709315,
+      "period": "2022"
     },
     {
       "code": "HUN",
       "name": "Hungary",
-      "ratio": 11.6078188156701,
-      "period": "2020 Q3"
+      "ratio": 11.6562464241504,
+      "period": "2022"
     },
     {
       "code": "IRL",
       "name": "Ireland",
-      "ratio": 16.117690003934,
-      "period": "2020 Q4"
+      "ratio": 16.3588321141157,
+      "period": "2022"
     },
     {
       "code": "ITA",
       "name": "Italy",
-      "ratio": 8.74340214600466,
-      "period": "2020 Q3"
+      "ratio": 8.96670124653723,
+      "period": "2022"
     },
     {
       "code": "JPN",
       "name": "Japan",
-      "ratio": 7.54100890579531,
-      "period": "2020 Q2"
+      "ratio": 8.06347040911298,
+      "period": "2022"
     },
     {
       "code": "KOR",
       "name": "Korea",
-      "ratio": 16.5878257806657,
-      "period": "2020 Q3"
+      "ratio": 15.8312749594266,
+      "period": "2022"
     },
     {
       "code": "LTU",
       "name": "Lithuania",
-      "ratio": 6.52898457634942,
-      "period": "2020 Q3"
+      "ratio": 7.46579819526901,
+      "period": "2022"
     },
     {
       "code": "LUX",
       "name": "Luxembourg",
-      "ratio": 15.7896786493487,
-      "period": "2020 Q3"
+      "ratio": 16.8589999055131,
+      "period": "2022"
     },
     {
       "code": "LVA",
       "name": "Latvia",
-      "ratio": 9.76719284847116,
-      "period": "2020 Q3"
+      "ratio": 8.95625476161908,
+      "period": "2022"
     },
     {
       "code": "NLD",
       "name": "Netherlands",
-      "ratio": 12.8514403188466,
-      "period": "2020 Q3"
+      "ratio": 14.7568210135802,
+      "period": "2022"
     },
     {
       "code": "NOR",
       "name": "Norway",
-      "ratio": 7.81331941967859,
-      "period": "2020 Q3"
+      "ratio": 8.6069227537018,
+      "period": "2022"
     },
     {
       "code": "NZL",
       "name": "New Zealand",
-      "ratio": 18.689886544094,
-      "period": "2020 Q2"
+      "ratio": 21.2578180970523,
+      "period": "2022"
     },
     {
       "code": "POL",
       "name": "Poland",
-      "ratio": 9.53223103323002,
-      "period": "2020 Q3"
+      "ratio": 10.4370790558751,
+      "period": "2022"
     },
     {
       "code": "PRT",
       "name": "Portugal",
-      "ratio": 11.3823842487522,
-      "period": "2020 Q3"
+      "ratio": 13.1438689089255,
+      "period": "2022"
     },
     {
       "code": "SVK",
       "name": "Slovakia",
-      "ratio": 9.22413321092673,
-      "period": "2020 Q3"
+      "ratio": 9.38558152530748,
+      "period": "2022"
     },
     {
       "code": "SVN",
       "name": "Slovenia",
-      "ratio": 10.6232831088347,
-      "period": "2020 Q3"
+      "ratio": 11.4072657711827,
+      "period": "2022"
     },
     {
       "code": "SWE",
       "name": "Sweden",
-      "ratio": 11.236013085818,
-      "period": "2020 Q4"
+      "ratio": 10.4356412023834,
+      "period": "2022"
     },
     {
       "code": "USA",
       "name": "United States",
-      "ratio": 4.05776636630352,
-      "period": "2020 Q4"
+      "ratio": 4.64812534290858,
+      "period": "2022"
     }
   ]
 };
