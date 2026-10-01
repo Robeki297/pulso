@@ -33,7 +33,11 @@ Credit growth now covers February–July 2026, the six latest available months. 
 Population: https://cbs.aw/wp/index.php/2025/12/15/test-births/
 Exchange rate: https://www.cbaruba.org/about-us-a-brief-history-of-the-bank/
 
-## Housing affordability — scaled ArubaListings sample, September 30, 2026
+## Housing affordability — temporarily removed from website
+
+The section, navigation link and module loading are removed from the live page at the owner’s request. The implementation and data remain saved for future restoration. The last complete published version is commit `c93de77`.
+
+### Saved methodology — September 30, 2026
 
 We divide each available ArubaListings House asking price by its reported built-up area, take the equally weighted median, then multiply by 100 m² and Afl. 1.79 per US dollar. On September 30, 2026, 192 available House cards were found; 45 lacked built-up area, leaving 147 price/area records. We exclude Sero Blanco 215 (AW1002414), whose area units conflict between the facts and description, and the older Kibrahachastraat 5 duplicate (AW1001893; retain AW1000925). The resulting 145 listings have a median of US$2,647.66/m², giving about US$264,766 or Afl. 473,931 per 100 m². Calculations use unrounded values. This is the median of individual price/area ratios, not total prices divided by total area. Each included detail page reported an available House for sale. Separately classified villas, condominiums, apartments, land, rentals and unavailable listings are outside this sample.
 
