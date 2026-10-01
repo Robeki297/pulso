@@ -33,19 +33,21 @@ Credit growth now covers February–July 2026, the six latest available months. 
 Population: https://cbs.aw/wp/index.php/2025/12/15/test-births/
 Exchange rate: https://www.cbaruba.org/about-us-a-brief-history-of-the-bank/
 
-## Housing affordability — ArubaListings, September 30, 2026
+## Housing affordability — scaled ArubaListings sample, September 30, 2026
 
-Aruba uses an observed listing of exactly 100 m² built-up area, not a price-per-m² size adjustment. ArubaListings was checked on September 30, 2026 for available House listings with exactly 100 m² of reported built-up area. One match was found: Villa Baranca 19, Paradera (MLS AW1003671), asking US$450,000, with a 333 m² lot. Both its facts and description confirm 100 m²; this is built-up area, not independently measured interior living area. Condominiums, land and unavailable listings are excluded. This is a single listing example, not an estimate of Aruba’s market median or completed sale prices. The asking price includes the property and land. At the CBA parity of Afl. 1.79 per US dollar, the price is Afl. 805,500.
+We divide each available ArubaListings House asking price by its reported built-up area, take the equally weighted median, then multiply by 100 m² and Afl. 1.79 per US dollar. On September 30, 2026, 192 available House cards were found; 45 lacked built-up area, leaving 147 price/area records. We exclude Sero Blanco 215 (AW1002414), whose area units conflict between the facts and description, and the older Kibrahachastraat 5 duplicate (AW1001893; retain AW1000925). The resulting 145 listings have a median of US$2,647.66/m², giving about US$264,766 or Afl. 473,931 per 100 m². Calculations use unrounded values. This is the median of individual price/area ratios, not total prices divided by total area. Each included detail page reported an available House for sale. Separately classified villas, condominiums, apartments, land, rentals and unavailable listings are outside this sample.
 
-Source: https://arubalistings.com/sale/paradera/house-3671-villa-baranca-19
+Reported built-up area is not necessarily interior living area and may include covered spaces, guest units or other structures. Renovation and multi-unit properties classified as House remain included. Land is bundled into asking prices; differences in land, location, condition and size are not controlled. One known duplicate was removed; other cross-broker duplicates and reporting errors may remain. A scaled 100 m² estimate is not an observed price of exactly 100 m² homes or a representative national PIR. Asking prices are not completed sale prices.
 
-Calculation: US$450,000 × 1.79 = Afl. 805,500. CBS median monthly wage (2024): Afl. 2,912; annualised = Afl. 34,944. Ratio = 23.0512 years of one median wage, or 11.5256 for a two-wage scenario. Individual administrative wages differ from OECD gross household disposable income per person. No wage growth is assumed.
+Audit: housing-sample.json includes prices, areas, individual unit prices, URLs, source update dates and both exclusions. Formula: median(askingUSD / builtAreaM2) × 100 × 1.79 / (2912 × 12 × earners). Result: 13.5625787993 for one median wage and 6.7812893997 for two. Sample date is the retrieval date; individual listings can be older. This is a static snapshot.
 
 CBS: https://cbs.aw/wp/index.php/2020/07/02/median-monthly-wages-by-economic-activity-in-afl-2015-2020/
+2024 monthly administrative median wage = Afl. 2,912, annualised to Afl. 34,944. No wage growth assumed. Two earners is an illustrative scenario, not measured household income.
 CBA parity: https://www.cbaruba.org/about-us-a-brief-history-of-the-bank/
+ArubaListings: https://arubalistings.com/sale/all
 
 OECD: https://housingpolicytoolkit.oecd.org/1.H_market.html
 Workbook: https://housingpolicytoolkit.oecd.org/figures/1.H_market/1.H_market_01_HP2Income.xlsx
-Use unrounded column C only where column F equals 2022: 29 countries. Australia and Estonia (2021) are excluded. No 2020 or 2021 data are displayed. These are absolute 100 m² price/income ratios, not the OECD indexed series. Household-sector income is per capita; gross means before fixed-capital consumption, not before personal income tax. Underlying methodology: https://economy-finance.ec.europa.eu/system/files/2019-09/dp101_en_houselev.pdf section 4.1 and Annex 5.
+Use unrounded column C only where column F equals 2022: 29 countries. Australia and Estonia (2021) are excluded. No 2020 or 2021 data are displayed. Absolute 100 m² price/income ratios, not the indexed series. OECD household disposable income is per capita; gross means before fixed-capital consumption, not before personal income tax. Methodology: https://economy-finance.ec.europa.eu/system/files/2019-09/dp101_en_houselev.pdf section 4.1 and Annex 5.
 
-Source dates and income concepts differ; the chart is contextual and not a harmonised ranking. Static snapshot, calculations by Pulso.
+Different dates and income concepts make these contextual comparisons, not a harmonised country ranking. Ratios are not mortgage repayment or saving periods.

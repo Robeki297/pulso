@@ -1,12 +1,12 @@
-/* CBS table 7.4; ArubaListings exact 100 m² house, n=1, September 30 2026; OECD Housing Policy Toolkit 2022 rows only. */
+/* CBS wages; ArubaListings median asking price/m², 145 listings; OECD 2022 only. */
 const HOUSING = {
   "checked": "2026-09-30",
   "monthlyWageAWG": 2912,
   "wageYear": 2024,
   "areaM2": 100,
-  "priceUSD": 450000,
+  "pricePerM2USD": 2647.6578411405294,
   "usdToAWG": 1.79,
-  "sampleCount": 1,
+  "sampleCount": 145,
   "pricePeriod": "September 2026",
   "peers": [
     {
