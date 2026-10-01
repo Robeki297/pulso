@@ -22,17 +22,17 @@
   }
   function render() {
     const earners = Number(byId('housing-earners').value);
-    const priceAWG = HOUSING.pricePerM2AWG * HOUSING.areaM2;
+    const priceAWG = HOUSING.priceUSD * HOUSING.usdToAWG;
     const income = annualWage * earners;
     byId('housing-ratio').textContent = number(priceAWG/income,1) + '×';
     byId('housing-ratio-label').textContent = earners === 1 ? 'Years of one annualised median wage' : 'Years of two median wages · scenario';
     byId('housing-price').textContent = 'Afl. ' + number(priceAWG);
-    byId('housing-price-awg').textContent = 'Afl. ' + number(HOUSING.pricePerM2AWG) + '/m² × 100 m² · Sep 2026';
+    byId('housing-price-awg').textContent = 'US$450,000 × 1.79 · one 100 m² listing';
     byId('housing-income').textContent = 'Afl. ' + number(income);
     byId('housing-income-label').textContent = 'Afl. 2,912 × 12 × ' + earners + ' · 2024 wage';
-    byId('housing-formula').textContent = 'Afl. ' + number(HOUSING.pricePerM2AWG) + '/m² × 100 m² ÷ (Afl. 2,912 × 12 × ' + earners + ') = ' + number(priceAWG/income,2) + ' years.';
+    byId('housing-formula').textContent = 'Afl. ' + number(priceAWG) + ' ÷ (Afl. 2,912 × 12 × ' + earners + ') = ' + number(priceAWG/income,2) + ' years.';
     byId('housing-aruba-bars').replaceChildren(
-      bar('Aruba · one median wage', priceAWG/annualWage, '100 m² estimate · Sep 2026 price / 2024 wage', true, earners===1),
+      bar('Aruba · one median wage', priceAWG/annualWage, 'One 100 m² listing · Sep 2026 price / 2024 wage', true, earners===1),
       bar('Aruba · two median wages', priceAWG/(annualWage*2), 'Illustrative household scenario', true, earners===2)
     );
     const shown = byId('housing-countries').value === 'all' ? peers : peers.filter(p => selectedCountries.has(p.code));

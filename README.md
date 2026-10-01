@@ -33,15 +33,19 @@ Credit growth now covers February–July 2026, the six latest available months. 
 Population: https://cbs.aw/wp/index.php/2025/12/15/test-births/
 Exchange rate: https://www.cbaruba.org/about-us-a-brief-history-of-the-bank/
 
-## Housing affordability — 100 m² revision, September 30, 2026
+## Housing affordability — ArubaListings, September 30, 2026
 
-The Housing section uses `housing-data.js`, `housing.js`, and `housing.css`. Both panels refer to 100 m². Aruba is a standardised-size listing-price estimate, not a sample restricted to exactly 100 m² homes. The OECD panel uses 2022 observations only.
+Aruba uses an observed listing of exactly 100 m² built-up area, not a price-per-m² size adjustment. ArubaListings was checked on September 30, 2026 for available House listings with exactly 100 m² of reported built-up area. One match was found: Villa Baranca 19, Paradera (MLS AW1003671), asking US$450,000, with a 333 m² lot. Both its facts and description confirm 100 m²; this is built-up area, not independently measured interior living area. Condominiums, land and unavailable listings are excluded. This is a single listing example, not an estimate of Aruba’s market median or completed sale prices. The asking price includes the property and land. At the CBA parity of Afl. 1.79 per US dollar, the price is Afl. 805,500.
 
-- Properstar, September 2026, houses (not apartments): Afl. 5,692/m². https://www.properstar.com.ph/aruba/house-price . The summary statistic is published even though time-series charts report no data. Sample count and detailed area definition are not disclosed. Multiplying this median unit price by 100 gives Afl. 569,200; it is not the observed median price conditional on 100 m². Do not imply constant unit prices across size, location or quality. Mercala's all-size median is no longer used.
-- CBS table 7.4, total economy, December 31, 2024: Afl. 2,912/month, annualised to Afl. 34,944. https://cbs.aw/wp/index.php/2020/07/02/median-monthly-wages-by-economic-activity-in-afl-2015-2020/ . Verified published image: https://cbs.aw/wp/wp-content/uploads/2020/07/Median-monthly-wages-by-economic-activity-in-Afl.-2015-2024.png . Administrative wages, not household disposable income; no wage growth or tax adjustment.
-- Calculation: 5692 × 100 / (2912 × 12) = 16.2889 years of one median wage; two-median-wage scenario = 8.1445. These are not mortgage repayment or saving periods.
-- OECD Housing Policy Toolkit, first chart: https://housingpolicytoolkit.oecd.org/1.H_market.html . Source: https://housingpolicytoolkit.oecd.org/figures/1.H_market/1.H_market_01_HP2Income.xlsx . Sheet 1: use column C (unrounded ratio) only where column F (year) equals 2022. Do not use column E's integer-rounded figures or interpret the column C heading as all rows being 2022. 29 eligible countries. Australia and Estonia are excluded because their year is 2021. There are no 2020/2021 observations in the website dataset. The workbook has an incorrect sheet dimension and a missing drawing; read-only extraction with reset_dimensions reads the actual data without relying on the drawing.
-- OECD's underlying HouseLev concept: price of a 100 m² dwelling / annual per-capita gross disposable income of households. See section 4.1 and Annex 5: https://economy-finance.ec.europa.eu/system/files/2019-09/dp101_en_houselev.pdf . This is household-sector income per person, not whole-household income or median worker wages. Gross refers to fixed-capital consumption, not before personal income taxes. The labels clarify the denominator more precisely than the earlier version.
-- Default seven-country view: Canada, France, Germany, Netherlands, New Zealand, United Kingdom and United States. All 29 can be shown. Alphabetical order, no Aruba rank or OECD average. Both charts use a zero-based 0–25 scale. Different income concepts and years remain visible.
+Source: https://arubalistings.com/sale/paradera/house-3671-villa-baranca-19
 
-Update inputs, notes, source links, and observation labels together. Verify both wage scenarios, country coverage, source-year filtering and mobile layout. The other dashboard data is unchanged.
+Calculation: US$450,000 × 1.79 = Afl. 805,500. CBS median monthly wage (2024): Afl. 2,912; annualised = Afl. 34,944. Ratio = 23.0512 years of one median wage, or 11.5256 for a two-wage scenario. Individual administrative wages differ from OECD gross household disposable income per person. No wage growth is assumed.
+
+CBS: https://cbs.aw/wp/index.php/2020/07/02/median-monthly-wages-by-economic-activity-in-afl-2015-2020/
+CBA parity: https://www.cbaruba.org/about-us-a-brief-history-of-the-bank/
+
+OECD: https://housingpolicytoolkit.oecd.org/1.H_market.html
+Workbook: https://housingpolicytoolkit.oecd.org/figures/1.H_market/1.H_market_01_HP2Income.xlsx
+Use unrounded column C only where column F equals 2022: 29 countries. Australia and Estonia (2021) are excluded. No 2020 or 2021 data are displayed. These are absolute 100 m² price/income ratios, not the OECD indexed series. Household-sector income is per capita; gross means before fixed-capital consumption, not before personal income tax. Underlying methodology: https://economy-finance.ec.europa.eu/system/files/2019-09/dp101_en_houselev.pdf section 4.1 and Annex 5.
+
+Source dates and income concepts differ; the chart is contextual and not a harmonised ranking. Static snapshot, calculations by Pulso.
